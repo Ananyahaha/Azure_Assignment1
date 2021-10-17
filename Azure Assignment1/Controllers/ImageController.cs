@@ -92,6 +92,7 @@ namespace Azure_Assignment1.Controllers
                 //TempData["LatestImage"] = imageUrl.ToString();
                 return RedirectToAction("ImgUpload");
             }
+
         }
 
     }
