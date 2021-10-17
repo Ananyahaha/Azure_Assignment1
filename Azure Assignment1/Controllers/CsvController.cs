@@ -18,6 +18,8 @@ namespace Azure_Assignment1.Controllers
         {
             _configuration = configuration;
         }
+        CsvService csvService = new CsvService();
+
 
         [HttpGet]
         public IActionResult CsvUpload()
@@ -25,52 +27,12 @@ namespace Azure_Assignment1.Controllers
             return View((bool)true);
         }
         [HttpPost]
-        public async Task<IActionResult> Csv(IFormFile files)
+        public async Task<ActionResult> CsvUpload(IFormFile photo)
         {
-            string fileExtension = System.IO.Path.GetExtension(files.FileName);
-
-            if (fileExtension == ".csv")
-            {
-                string blobstorageconnection = _configuration.GetValue<string>("ConnectionStrings:DefaultConnection");
-
-                byte[] dataFiles;
-
-                // Retrieve storage account from connection string.
-                CloudStorageAccount cloudStorageAccount = CloudStorageAccount.Parse(blobstorageconnection);
-
-                // Create the blob client.
-                CloudBlobClient cloudBlobClient = cloudStorageAccount.CreateCloudBlobClient();
-
-                // Retrieve a reference to a container.
-                CloudBlobContainer cloudBlobContainer = cloudBlobClient.GetContainerReference(_configuration.GetValue<string>("ConnectionStrings:blobContainerNameForCsvFile"));
-
-                await cloudBlobContainer.CreateIfNotExistsAsync();
-
-                BlobContainerPermissions permissions = new BlobContainerPermissions
-                {
-                    PublicAccess = BlobContainerPublicAccessType.Blob
-                };
-
-                string systemFileName = files.FileName;
-                await cloudBlobContainer.SetPermissionsAsync(permissions);
-                await using (var target = new MemoryStream())
-                {
-                    files.CopyTo(target);
-                    dataFiles = target.ToArray();
-                }
-
-                // This also does not make a service call; it only creates a local object.
-                CloudBlockBlob cloudBlockBlob = cloudBlobContainer.GetBlockBlobReference(systemFileName);
-
-                await cloudBlockBlob.UploadFromByteArrayAsync(dataFiles, 0, dataFiles.Length);
-            }
-
-            return View((bool)(fileExtension == ".csv") ? true : false);
+            var csvUrl = await csvService.UploadCsvAsync(photo);
+            return RedirectToAction("CsvUpload");
         }
 
-    
 
-
+    }
 }
-}
-
