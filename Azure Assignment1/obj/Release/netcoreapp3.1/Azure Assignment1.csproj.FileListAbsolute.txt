@@ -1,0 +1,8 @@
+C:\Users\Adhya M Menon\Desktop\Cld practice\Azure Assignment1\Azure Assignment1\obj\Release\netcoreapp3.1\Azure Assignment1.csproj.AssemblyReference.cache
+C:\Users\Adhya M Menon\Desktop\Cld practice\Azure Assignment1\Azure Assignment1\obj\Release\netcoreapp3.1\Azure Assignment1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Adhya M Menon\Desktop\Cld practice\Azure Assignment1\Azure Assignment1\obj\Release\netcoreapp3.1\Azure Assignment1.AssemblyInfoInputs.cache
+C:\Users\Adhya M Menon\Desktop\Cld practice\Azure Assignment1\Azure Assignment1\obj\Release\netcoreapp3.1\Azure Assignment1.AssemblyInfo.cs
+C:\Users\Adhya M Menon\Desktop\Cld practice\Azure Assignment1\Azure Assignment1\obj\Release\netcoreapp3.1\Azure Assignment1.csproj.CoreCompileInputs.cache
+C:\Users\Adhya M Menon\Desktop\Cld practice\Azure Assignment1\Azure Assignment1\obj\Release\netcoreapp3.1\Azure Assignment1.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Adhya M Menon\Desktop\Cld practice\Azure Assignment1\Azure Assignment1\obj\Release\netcoreapp3.1\Azure Assignment1.RazorAssemblyInfo.cache
+C:\Users\Adhya M Menon\Desktop\Cld practice\Azure Assignment1\Azure Assignment1\obj\Release\netcoreapp3.1\Azure Assignment1.RazorAssemblyInfo.cs

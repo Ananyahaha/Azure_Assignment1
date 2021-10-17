@@ -1,0 +1,33 @@
+﻿@model bool
+
+@{
+    ViewData["Title"] = "Upload Blob";
+}
+
+@{
+    if (@Model == true)
+    {
+        <div class="row">
+            <div class="col-md-6">
+                <form method="post" enctype="multipart/form-data" asp-controller="Csv" asp-action="CsvUpload">
+                    <div class="form-group">
+                        <label> Select Data File (only .csv supported) </label>
+                        <input class="form-control" name="files" type="file" />
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" value="Submit" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
+    else
+    {
+        //Toaster Code
+        <script>alert("Incorrect Format")</script>
+        <a asp-controller="Csv" asp-action="CsvUpload">Go back to Upload Page</a>
+    }
+}
+
+
+@*<p>@Model</p>*@
