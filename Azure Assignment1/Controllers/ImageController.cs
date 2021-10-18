@@ -44,16 +44,7 @@ namespace Azure_Assignment1.Controllers
                 //TempData["LatestImage"] = imageUrl.ToString();
                 return RedirectToAction("Index","Home");
             }
-        public ActionResult LatestImage()
-        {
-            var latestImage = string.Empty;
-            if (TempData["LatestImage"] != null)
-            {
-                ViewBag.LatestImage = Convert.ToString(TempData["LatestImage"]);
-            }
-
-            return View();
-        }
+        
     }
 
 
