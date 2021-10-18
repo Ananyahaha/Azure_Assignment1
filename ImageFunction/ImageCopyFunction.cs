@@ -4,7 +4,7 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Extensions.Logging;
 
-namespace FunctionAppImageCopy
+namespace ImageFunction
 {
     [StorageAccount("BlobConnectionString")]
     public static class ImageCopyFunction
@@ -20,5 +20,4 @@ namespace FunctionAppImageCopy
             //log.LogInformation($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {anotherBlob.Length} Bytes");
         }
     }
-
 }
