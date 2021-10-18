@@ -27,12 +27,12 @@ namespace Azure_Assignment1.Controllers
             return View((bool)true);
         }
         [HttpPost]
-        public async Task<ActionResult> CsvUpload(IFormFile photo)
-        {
-            var csvUrl = await csvService.UploadCsvAsync(photo);
-            return RedirectToAction("CsvUpload");
+        public async Task<ActionResult> CsvUpload(IFormFile csv)
+        { 
+            var csvUrl = await csvService.UploadCsvAsync(csv);
+            return RedirectToAction("Index","Home");
         }
-
+       
 
     }
 }

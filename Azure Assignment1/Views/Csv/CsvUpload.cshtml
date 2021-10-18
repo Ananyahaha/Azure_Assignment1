@@ -1,33 +1,25 @@
-﻿@model bool
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{ }
 
-@{
-    ViewData["Title"] = "Upload Blob";
-}
+<h2>Upload Csv File</h2>
+<br />
 
-@{
-    if (@Model == true)
-    {
-        <div class="row">
-            <div class="col-md-6">
-                <form method="post" enctype="multipart/form-data" asp-controller="Csv" asp-action="CsvUpload">
-                    <div class="form-group">
-                        <label> Select Data File (only .csv supported) </label>
-                        <input class="form-control" name="files" type="file" />
-                    </div>
-                    <div class="form-group">
-                        <input class="btn btn-success" type="submit" value="Submit" />
-                    </div>
-                </form>
-            </div>
+@using (Html.BeginForm("CsvUpload", "Csv", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<fieldset class="form-horizontal">
+    <div class="form-group">
+        <label class="control-label col-md-2" for="csv">Csv File</label>
+        <div class="col-md-10">
+            <input type="file" name="csv" />
         </div>
-    }
-    else
-    {
-        //Toaster Code
-        <script>alert("Incorrect Format")</script>
-        <a asp-controller="Csv" asp-action="CsvUpload">Go back to Upload Page</a>
-    }
-}
+    </div>
+    <div class="form-group">
+        &nbsp;
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Submit" class="btn" />
+        </div>
 
-
-@*<p>@Model</p>*@
+    </div>
+</fieldset>}

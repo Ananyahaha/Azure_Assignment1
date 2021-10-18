@@ -40,3 +40,5 @@ C:\Users\Adhya M Menon\Desktop\Cld practice\Azure Assignment1\Azure Assignment1\
 C:\Users\Adhya M Menon\Desktop\Cld practice\Azure Assignment1\Azure Assignment1\obj\Debug\netcoreapp3.1\Azure Assignment1.dll
 C:\Users\Adhya M Menon\Desktop\Cld practice\Azure Assignment1\Azure Assignment1\obj\Debug\netcoreapp3.1\Azure Assignment1.pdb
 C:\Users\Adhya M Menon\Desktop\Cld practice\Azure Assignment1\Azure Assignment1\obj\Debug\netcoreapp3.1\Azure Assignment1.genruntimeconfig.cache
+C:\Users\Adhya M Menon\Desktop\Cld practice\Azure Assignment1\Azure Assignment1\obj\Debug\netcoreapp3.1\Azure Assignment1.csproj.AssemblyReference.cache
+C:\Users\Adhya M Menon\Desktop\Cld practice\Azure Assignment1\Azure Assignment1\obj\Debug\netcoreapp3.1\Razor\Views\Image\LatestImage.cshtml.g.cs

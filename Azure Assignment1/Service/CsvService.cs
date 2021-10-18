@@ -36,7 +36,7 @@ namespace Azure_Assignment1
 
                 CloudBlockBlob cloudBlockBlob = cloudBlobContainer.GetBlockBlobReference(csvToUpload.FileName);
                 cloudBlockBlob.Properties.ContentType = csvToUpload.ContentType;
-                await cloudBlockBlob.UploadFromStreamAsync(csvToUpload.OpenReadStream());
+                //await cloudBlockBlob.UploadFromStreamAsync(csvToUpload.OpenReadStream());
                 string strpath = Path.GetExtension(csvToUpload.FileName);
 
                 if (strpath != ".csv")
@@ -46,6 +46,7 @@ namespace Azure_Assignment1
                 else
                 {
                     await cloudBlockBlob.UploadFromStreamAsync(csvToUpload.OpenReadStream());
+                    
                 }
 
                 csvFullPath = cloudBlockBlob.Uri.ToString();

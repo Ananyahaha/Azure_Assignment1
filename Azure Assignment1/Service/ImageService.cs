@@ -37,7 +37,7 @@ namespace Azure_Assignment1
 
                 CloudBlockBlob cloudBlockBlob = cloudBlobContainer.GetBlockBlobReference(imageToUpload.FileName);
                 cloudBlockBlob.Properties.ContentType = imageToUpload.ContentType;
-                await cloudBlockBlob.UploadFromStreamAsync(imageToUpload.OpenReadStream());
+                //await cloudBlockBlob.UploadFromStreamAsync(imageToUpload.OpenReadStream());
                 string strpath = Path.GetExtension(imageToUpload.FileName);
 
                 if (strpath != ".jpg" && strpath != ".jpeg" && strpath != ".jfif" && strpath != ".gif" && strpath != ".png")

@@ -42,10 +42,20 @@ namespace Azure_Assignment1.Controllers
             {
                 var imageUrl = await imageService.UploadImageAsync(photo);
                 //TempData["LatestImage"] = imageUrl.ToString();
-                return RedirectToAction("ImgUpload");
+                return RedirectToAction("Index","Home");
+            }
+        public ActionResult LatestImage()
+        {
+            var latestImage = string.Empty;
+            if (TempData["LatestImage"] != null)
+            {
+                ViewBag.LatestImage = Convert.ToString(TempData["LatestImage"]);
             }
 
+            return View();
         }
+    }
+
 
     }
 
