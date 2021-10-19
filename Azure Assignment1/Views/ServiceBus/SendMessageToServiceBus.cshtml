@@ -2,12 +2,15 @@
     ViewData["Title"] = "Upload Blob";
 }
 
+<h2>Upload Image</h2>
+
+<br /> 
 <div class="row">
     <div class="col-md-6">
         <form method="post" asp-controller="ServiceBus" asp-action="SendMessageToServiceBus">
             <div class="form-group">
                 <label> Enter message to send to Azure queue </label>
-                <input class="form-control" name="Msg" multiple="multiple" type="text" />
+                <input class="form-control" name="messageToSend" multiple="multiple" type="text" />
             </div>
             <div class="form-group">
                 <input class="btn btn-success" type="submit" value="Submit" />

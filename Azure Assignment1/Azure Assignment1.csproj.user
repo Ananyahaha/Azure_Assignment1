@@ -6,5 +6,9 @@
     <Controller_SelectedScaffolderID>MvcControllerEmptyScaffolder</Controller_SelectedScaffolderID>
     <Controller_SelectedScaffolderCategoryPath>root/Common/MVC/Controller</Controller_SelectedScaffolderCategoryPath>
     <NameOfLastUsedPublishProfile>C:\Users\Adhya M Menon\Desktop\Cld practice\Azure Assignment1\Azure Assignment1\Properties\PublishProfiles\AzureAssignment120211017132225 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <ActiveDebugProfile>Azure_Assignment1</ActiveDebugProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

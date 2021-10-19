@@ -24,15 +24,15 @@ namespace Azure_Assignment1.Controllers
         }
 
         [HttpGet]
-        public IActionResult Submit()
+        public IActionResult SendMessageToServiceBus()
         {
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Submit(string messageToSend)
+        public async Task<IActionResult> SendMessageToServiceBus(string messageToSend)
         {
-            IQueueClient queueClient = new QueueClient(_configuration.GetValue<string>("ConnectionStrings:ServiceBusConnectionString"), _configuration.GetValue<string>("ConnectionStrings:QueueName"));
+            IQueueClient queueClient = new QueueClient(_configuration.GetValue<string>("ConnectionString:QueueConnectionString"), _configuration.GetValue<string>("ConnectionString:QueueName"));
 
             var messageJSON = JsonConvert.SerializeObject(messageToSend);
 
@@ -46,6 +46,8 @@ namespace Azure_Assignment1.Controllers
             await queueClient.SendAsync(queueMessage);
 
             return View();
+            return RedirectToAction("Index", "Home");
+
         }
 
 
